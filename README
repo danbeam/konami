@@ -1,0 +1,19 @@
+This is the infamous Konami code hack, where you enter in the following key strokes:
+
+Up    (arrow)
+Up    (arrow)
+Down  (arrow)
+Down  (arrow)
+Left  (arrow)
+Right (arrow)
+Left  (arrow)
+Right (arrow)
+B
+A
+
+This script will track the last 10 keydown events and trigger document.onKonami if
+it detects the user knows the trick, ;).
+
+Have fun,
+
+Dan
