@@ -10,6 +10,7 @@ Left  (arrow)
 Right (arrow)
 B
 A
+Enter
 
 This script will track the last 10 keydown events and trigger document.onKonami if
 it detects the user knows the trick, ;).
