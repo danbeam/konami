@@ -6,7 +6,7 @@
 */
 (function () {
     var pressed          = [],
-        konami           = [38, 38, 40, 40, 37, 39, 37, 39, 98, 97, 13],
+        konami           = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13],
         konami_check     = konami.join(','),
         check_for_konami = function (e) {
             e = e || window.event;
