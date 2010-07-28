@@ -18,3 +18,11 @@ it detects the user knows the trick, ;).
 Have fun,
 
 Dan
+
+P.S. I've just tested this script in
+
+IE6 / FF 3.6                           (Windows XP SP2),
+FF 3.6 / Chrome 5 / Safari 5           (OS X 10.6.4),
+Firefox 3.6 / Opera 10 / Konqueror 3.5 (RHEL 5.4)
+
+and it seemed to work fine in all these browsers.
