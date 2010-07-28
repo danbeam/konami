@@ -18,14 +18,14 @@
                 document.onKonami.call(document, e, this, arguments.callee);
             }
         };
-    if ('function' === typeof document.onkeypress) {
-        var oldkeypress = document.onkeypress;
-        document.onkeypress = function (e) {
-            oldkeypress.call(this, e);
+    if ('function' === typeof document.onkeydown) {
+        var oldkeydown = document.onkeydown;
+        document.onkeydown = function (e) {
+            oldkeydown.call(this, e);
             check_for_konami.call(this, e);
         };
     }
     else {
-        document.onkeypress = check_for_konami;
+        document.onkeydown = check_for_konami;
     }
 })();
