@@ -4,10 +4,11 @@
 * @author       Dan Beam (dan@danbeam.org)
 * @license      GPLv3
 */
-(function () {
+(function (window, document) {
     var pressed          = [],
         konami           = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13],
         konami_check     = konami.join(','),
+        standard         = !!document.addEventListener,
         check_for_konami = function (e) {
             e = e || window.event;
             if (pressed.length > konami.length - 1) {
@@ -18,14 +19,5 @@
                 document.onKonami.call(document, e, this, arguments.callee);
             }
         };
-    if ('function' === typeof document.onkeydown) {
-        var oldkeydown = document.onkeydown;
-        document.onkeydown = function (e) {
-            oldkeydown.call(this, e);
-            check_for_konami.call(this, e);
-        };
-    }
-    else {
-        document.onkeydown = check_for_konami;
-    }
-})();
+    document[standard ? 'addEventListener' : 'attachEvent']((standard ? '' : 'on') + 'keydown', check_for_konami);
+}(this, this.document));
